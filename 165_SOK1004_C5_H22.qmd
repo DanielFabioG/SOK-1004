@@ -311,13 +311,16 @@ ggplot(aes(x=år, y=final)) +
   
 # Plotter inn gjennomsnittsverdiene rundet av som horisontale linjer over
 # årene som ble printet ut i koden over
-  geom_segment(aes(x=1,xend=10,y=avg96_05[1,12],yend=avg96_05[1,12]), linewidth=0.8) +
-  geom_segment(aes(x=11,xend=18,y=avg05_13[1,12],yend=avg05_13[1,12]), linewidth=0.8) + 
-  geom_segment(aes(x=11,xend=26,y=avg06_21[1,12],yend=avg06_21[1,12]), linewidth=0.8) +
+  geom_segment(aes(x=1,xend=10,y=avg96_05[1,12],yend=avg96_05[1,12]),
+               linewidth=0.8) +
+  geom_segment(aes(x=11,xend=18,y=avg05_13[1,12],yend=avg05_13[1,12]), 
+               linewidth=0.8) + 
+  geom_segment(aes(x=1,xend=26,y=avg06_21[1,12],yend=avg06_21[1,12]), 
+               linewidth=0.8) +
   
 # Lager linje for 0 punktet horisontalt og en for punkt 5 for å få den som en boks
-  geom_hline(yintercept=0, size=0.5, colour= "grey") +
-  geom_hline(yintercept=5, size=0.5, colour= "grey") +
+  geom_hline(yintercept=0, linewidth=0.5, colour= "grey") +
+  geom_hline(yintercept=5, linewidth=0.5, colour= "grey") +
   
 # Lager tittel
   labs(title="Timeverksproduktivitet, markedsrettede fastlandsnæringer") +
@@ -332,4 +335,4 @@ ggplot(aes(x=år, y=final)) +
 
 ## Står konklusjonen i rapporten seg?
 
-Tolker man figuren så har arbeidsproduktiviteten fortsatt videre med en gjennomsnitlig økning på 0.7 prosent fra 2006 til 2021. Utregningen her avviker noe og viser at 2005-2013 har en gjennomsnitlig økning på 0.97 prosent mot 0.8 prosent i deres figur. Dette vil si at produktivitetsveksten er i en synkende trend og at det rapporten konkluderer med i 2015 stemmer hvor den sier at de gunstige tiårene vi har hatt fra 1996-2005 ikke trenger å bety at Norge fremover skal forvente like høy vekst i produktivitet.
+Tolker man figuren så har arbeidsproduktiviteten fortsatt videre med en gjennomsnitlig økning på 1 prosent fra 2006 til 2021. Utregningen her avviker noe og viser at 2005-2013 har en gjennomsnitlig økning på 1.34 prosent mot 0.8 prosent i deres figur. Dette vil si at produktivitetsveksten er i en synkende trend og at det rapporten konkluderer med i 2015 stemmer hvor den sier at de gunstige tiårene vi har hatt fra 1996-2005 ikke trenger å bety at Norge fremover skal forvente like høy vekst i produktivitet.
