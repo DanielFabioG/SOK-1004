@@ -9,7 +9,8 @@ editor: visual
 
 ```{r, output: false}
 
-rm(list=ls()) 
+rm(list=ls())
+options(scipen = 999)
 library(tidyverse)
 library(ggthemes)
 library(openxlsx)
@@ -371,7 +372,7 @@ Rentene til bankene sto fast på de samme kronebeløpene selv om alt annet falt 
 
 Fra starten av 1900-tallet og spesielt under første verdenskrig var Norge et land preget av sterk industrialisering, hvor bedrifter kunne produsere mer effektivt med maskineri, men var også en tid hvor arbeidskraft ble sårt trengt for å bemanne maskineriet. Arbeidsledigheten i landet sank, og vi hadde en god periode hvor produktiviteten blomstret. I 1920 ble det spådd av statsminister Gunnar Knudsen at vi sto ovenfor et økonomisk sammenbrudd. Han jobbet som skipsreder og hadde sett at frakten av varer til utlandet hadde sunket med 30 prosent på bare noen få måneder. Bedriftene som hadde investert stort for å fortsette veksten ifølge han måtte stenge ned (s. 16, klassekamp og felleskamp).
 
-1920-årene ble sett på som harde på grunn av to hovedperioder, 1921 og 1926-27. Slik som statsministeren spådde fikk han rett, og mange bedrifter gikk enten konkurs eller måtte nedbemanne på grunn av at varene de produserte ikke lengre var mulig å bli kvitt til lønnsomme priser. Arbeidsledigheten i landet steg veldig i 1921, men avtok årene etter før å deretter ha en ny krisetopp i 1926-27. (vis i figur)
+1920-årene ble sett på som harde på grunn av to hovedperioder, 1921 og 1926-27. Slik som statsministeren spådde fikk han rett, og mange bedrifter gikk enten konkurs eller måtte nedbemanne på grunn av at varene de produserte ikke lengre var mulig å bli kvitt til lønnsomme priser. Arbeidsledigheten i landet steg veldig i 1921, men avtok årene etter før å deretter ha en ny krisetopp i 1926-27. (Figur 3.1)
 
 **Konflikter og streik**
 
@@ -379,7 +380,7 @@ Under starten av industrialiseringen fikk bedriftene mer makt over arbeiderne si
 
 Et stort og det eneste virkemiddelet arbeiderne hadde for å kjempe imot bedriftene var streik. Med vekst i organisasjonene ble også mulighetene for konflikter større.
 
-Dette kan man spesielt se i 1921 (vis figur), hvor arbeidsstansen var på hele 3.5 millioner tapte arbeidsdager.
+Dette kan man spesielt se i 1924 (Figur 3.4), hvor arbeidsstansen var på hele 5.1 millioner tapte arbeidsdager.
 
 **Konklusjon og forklare kode og figurer**
 
@@ -389,9 +390,11 @@ labour %>%
   filter(næring == "Totalt for næringer") %>%
   filter(år >= 1920) %>%
 ggplot(aes(x=år, y=value, group=1)) +
-  geom_line() +
+  geom_line(color="cornflowerblue", size=2) +
     scale_x_discrete(guide = guide_axis(check.overlap = TRUE)) +
-  labs(x = "År", y="Antall sysselsatte (1000)", title = "Figur 3.1, Sysselsatte totalt for alle næringer i Norge", caption="Kilde: SSB, Tabell 10260")
+  labs(x = "År", y="Antall sysselsatte (1000)", title = "Figur 3.1, Sysselsatte totalt alle næringer i Norge", caption="Kilde: SSB, Tabell 10260")+
+  theme_fivethirtyeight()+
+  theme(axis.title = element_text())
 ```
 
 ```{r}
@@ -403,11 +406,13 @@ df2 <- df2[-(1:10),] %>%
 
 ```{r}
 df2 %>%
-  filter(år >= 1920) %>%
-  filter(år <= 1930) %>%
+  filter(år %in% c(1920:1930)) %>%
   ggplot(aes(x=år, y=value, group=1)) +
-  geom_line() +
-  labs(title="Figur 3.2, Konkurser i Norge", x="År", y="Antall")
+  geom_line(color="cornflowerblue", size=2) +
+  labs(title="Figur 3.2, Konkurser i Norge", x="År", y="Antall",
+       caption="Kilde: Norges Bank")+
+  theme_fivethirtyeight()+
+  theme(axis.title= element_text())
 ```
 
 ```{r}
@@ -433,19 +438,65 @@ df3 <- df3[-(1:14),] %>%
   mutate(smooth_inflation= as.numeric(gsub(",","",smooth_inflation)))
 
 df_plot <- df3 %>%
-  pivot_longer(c("real_marginal_rate", "real_loans_rate", "real_deposit_rate",  "real_bond_yield", "inflation"), names_to = "var", values_to ="value")
+  pivot_longer(c("real_marginal_rate", "real_loans_rate",  "real_bond_yield"), names_to = "var", values_to ="value")
 ```
 
 ```{r}
 df3 %>%
-  filter(år >= 1920) %>%
-  filter(år <= 1930) %>%
+  filter(år %in% c(1920:1930)) %>%
   ggplot(aes(x=år, y=inflation, group=1))+
-  geom_line()+
-  labs(title="Figur 3.2, Inflasjon i Norge")
+  geom_line(color="cornflowerblue", size=2)+
+  labs(title="Figur 3.3, Inflasjon i Norge", x="År", y="Inflasjon",
+       caption="Kilde: Norges Bank")+
+  theme_fivethirtyeight()+
+# Siden theme_fivethirtyeight har fjernet titler til aksene må jeg legge de
+# inn igjen i theme
+theme(axis.title = element_text())+
+  geom_hline(yintercept = 0)
 ```
 
-Kildehenvisning:
+```{r}
+# Lager et datasett for tapte arbeidsdager på grunn av arbeidskonflikter
+
+df4 <- data.frame(år = c(1922:1930), tapte_arbeidsdager = c(91380, 796274, 5152386, 666650, 2205365, 1374089, 363844, 196704, 240454))
+
+df4 <- as.tibble(df4)
+
+# Kilde: https://www.ssb.no/a/histstat/hs1968.pdf
+# Side 100
+```
+
+```{r}
+# Klarer ikke å finne en kilde som har data for årstall tidligere enn 1922.
+df4 %>%
+  ggplot(aes(x=år, y=tapte_arbeidsdager/1000, group=1))+
+  geom_line(color="cornflowerblue", size=2)+
+  labs(x="År", y="Tapte arbeidsdager (1000)",
+       title="Figur 3.4, Tapte arbeidsdager i konflikter",
+       caption="Kilde: SSB")+
+  theme_fivethirtyeight()+
+# Siden theme_fivethirtyeight har fjernet titler til aksene må jeg legge de
+# inn igjen i theme
+theme(axis.title = element_text())
+```
+
+```{r}
+df_plot %>%
+  filter(år %in% c(1920:1930)) %>%
+  ggplot(aes(x=år, y=value, color=var, group=var))+
+  geom_line(size=2)+
+  theme_fivethirtyeight()+
+  theme(axis.title = element_text())+
+  labs(title="Figur 3.5, Renten i Norge", x="År", y= "Prosent",
+       caption="Kilde: Norges Bank",
+       subtitle="Korrigert for inflasjon og skatt")+
+  scale_color_manual(name="var", values = c("cornflowerblue","red", "orange"),
+                   labels=c("Reelle obligasjonsrenter", 
+                            "Reelle lånsrenter",
+                            "Reelle marginalrenter"))
+```
+
+## Kildehenvisning:
 
 [Edvard Bull, *Klassekamp og fellesskap 1920--1945*, bind 13 av *Norges historie*, Knut Mykland (red.), Oslo 1979](http://urn.nb.no/URN:NBN:no-nb_digibok_2006082500042)
 
@@ -454,3 +505,5 @@ Kildehenvisning:
 [Eitrheim, Gerdrup and Klovland (2004). Credit, banking and monetary developments in Norway 1819-2003 (pp.403). Norges Bank Occational Papers No. 35 (Ch. 10 in Eitrheim et al. 2004](https://www.norges-bank.no/globalassets/upload/hms/data/money_credit.xlsx)
 
 [SSB, 10260: Sysselsatte personer, etter næring (avslutta serie) 1900 - 1969](https://www.ssb.no/statbank/table/10260/)
+
+[SSB, Historisk statistikk 1968, side 100](https://www.ssb.no/a/histstat/hs1968.pdf)
