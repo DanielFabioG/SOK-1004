@@ -360,9 +360,21 @@ Figuren viser andel av BNP som hver desil i gruppene får av total BNP fremstilt
 
 **Innledning**
 
-Norge i 1920 var et land som sto fast i en hard tid etter første verdenskrig. Norges krone før verdenskrigen hadde i lang tid vært knyttet opp mot reservelager av (Norges sentralbank?) gull i bankene omkring i landet, som vil si at for å gi en krone verdi så hadde den en viss verdi mengde gull som ga kronen dens verdi. Dette ble kalt for gullstandarden. Under første verdenskrig så ble gullstandarden opphørt og gjorde slik at det ble økonomisk usikkerhet i Norge på grunn av at verdien til kronen nå ikke koblet til en verdi av noe annet. Denne tiden ble kalt de harde mellomkrigsårene. Norges sentralbanksjef på denne tiden Nicolai Rygg mente at for å komme tilbake til de gode økonomiske tidene vi hadde før krigen så måtte vi på nytt prøve å føre kroneverdien til pari mot gull. Slik at kronekursen som hadde tapt seg i verdensmarkedet (kildehenvis, eventuelt vis figur) ble stabilisert og landet kunne fortsette med de gode økonomiske årene som før krigen. Denne politikken som sentralbanksjefen i landet førte ble kalt for paripolitikken, og har blitt hardt kritisert av økonomer i ettertid. I denne sammenheng skal vi se videre på to økonomiske forhold som paripolitikken i mellomkrigstiden førte med seg.
+*#konklusjon i innledning er lurt i en GOD økonomisk vitenskapelig tekst.*
+
+*#litt lang innledning, kort og konsis*
+
+Norge i 1920 var et land som sto fast i en hard tid etter første verdenskrig. Norges krone før verdenskrigen hadde i lang tid vært knyttet opp mot reservelager av (Norges sentralbank?) gull i bankene omkring i landet, som vil si at for å gi en krone verdi så hadde den en viss verdi mengde gull som ga kronen dens verdi. Dette ble kalt for gullstandarden. Under første verdenskrig så ble gullstandarden opphørt og gjorde slik at det ble økonomisk usikkerhet i Norge på grunn av verdien til kronen nå ikke var koblet til en verdi av noe annet. Denne tiden ble kalt de harde mellomkrigsårene. Norges sentralbanksjef på denne tiden Nicolai Rygg mente at for å komme tilbake til de gode økonomiske tidene vi hadde før krigen så måtte vi på nytt prøve å føre kroneverdien til pari mot gull. Slik at kronekursen som hadde tapt seg i verdensmarkedet (kildehenvis, eventuelt vis figur) ble stabilisert og landet kunne fortsette med de gode økonomiske årene som før krigen. Denne politikken som sentralbanksjefen i landet førte ble kalt for paripolitikken, og har blitt hardt kritisert av økonomer i ettertid. I denne sammenheng skal vi se videre på to økonomiske forhold som paripolitikken i mellomkrigstiden førte med seg.
 
 **Litt mer om paripolitikken og hva sentralbanksjefen prøvde å få til i disse årene, utdype mer**
+
+**Pari politikk**
+
+I perioden mellom 1920 og 1930 var pari-politikk en politikk som aktivt ble ført for å få økonomien til flere nordiske land tilbake til gullstandard, det var det dominerende pengesystemet som ble brukt før første verdenskrig, men ble suspendert i krigsperioden. Så det var ett ønske om å komme seg tilbake til denne pengeenheten som hadde fungert godt tidligere. Pengeenheten skal ha et fast innhold av gull, og bankene forpliktet seg til å kunne gi ut gullbarer for seddler.
+
+Politiken hadde som mål å begrense mengden penger i omløp i som skulle senke prisnivået og styrke valutaens verdi relativt i forhold til andre lands valuta.
+
+Figur 3.3 viser inflasjonen i Norge. Det er det tydelige svingninger gjennom hele denne perioden. Som er resultatet av Pengepolitikken. selv om det kan være mange årsaker til at en økonomi kan være i ubalanse anses pari politikken anses å være en av årsakene til mesteparten. Det var det bred oppsluttning for politikken i starten av 1920 årene, men ble senere kritisert for å være årsaken til ubalansen i Norsk økonomi. Tanken om å gjenopprette en gitt verdi mot gull har bidratt til å skape mere ubalanse enn å stabilisere.
 
 **Økonomisk problem med utlån fra banker under de harde 1920 årene.**
 
@@ -370,15 +382,21 @@ Rentene til bankene sto fast på de samme kronebeløpene selv om alt annet falt 
 
 **Arbeidsledighet**
 
-Fra starten av 1900-tallet og spesielt under første verdenskrig var Norge et land preget av sterk industrialisering, hvor bedrifter kunne produsere mer effektivt med maskineri, men var også en tid hvor arbeidskraft ble sårt trengt for å bemanne maskineriet. Arbeidsledigheten i landet sank, og vi hadde en god periode hvor produktiviteten blomstret. I 1920 ble det spådd av statsminister Gunnar Knudsen at vi sto ovenfor et økonomisk sammenbrudd. Han jobbet som skipsreder og hadde sett at frakten av varer til utlandet hadde sunket med 30 prosent på bare noen få måneder. Bedriftene som hadde investert stort for å fortsette veksten ifølge han måtte stenge ned (s. 16, klassekamp og felleskamp).
+Fra starten av 1900-tallet og spesielt under første verdenskrig var Norge et land preget av sterk industrialisering, hvor bedrifter kunne produsere mer effektivt med maskineri, men var også en tid hvor arbeidskraft ble sårt trengt for å bemanne maskineriet. Arbeidsledigheten i landet sank, og vi hadde en god periode hvor produktiviteten blomstret.
 
-1920-årene ble sett på som harde på grunn av to hovedperioder, 1921 og 1926-27. Slik som statsministeren spådde fikk han rett, og mange bedrifter gikk enten konkurs eller måtte nedbemanne på grunn av at varene de produserte ikke lengre var mulig å bli kvitt til lønnsomme priser. Arbeidsledigheten i landet steg veldig i 1921, men avtok årene etter før å deretter ha en ny krisetopp i 1926-27. (Figur 3.1)
+I 1920 ble det spådd av statsminister Gunnar Knudsen at vi sto ovenfor et økonomisk sammenbrudd.
+
+Han jobbet som skipsreder og hadde sett at frakten av varer til utlandet hadde sunket med 30 prosent på bare noen få måneder. Bedriftene som hadde investert stort for å fortsette veksten ifølge han måtte stenge ned (s. 16, klassekamp og felleskamp).
+
+1920-årene ble sett på som harde på grunn av to hovedperioder, 1921 og 1926-27. Slik som statsministeren spådde fikk han rett, og mange bedrifter gikk enten konkurs eller måtte nedbemanne på grunn av at varene de produserte ikke lengre var mulig å bli kvitt til lønnsomme priser. Arbeidsledigheten i landet steg kraftig i 1921, men avtok årene etter før å deretter ha en ny krisetopp i 1926-27. (Figur 3.1)
 
 **Konflikter og streik**
 
 Under starten av industrialiseringen fikk bedriftene mer makt over arbeiderne siden de fikk mer realkapital som de brukte til å investere i produksjonsmidler. Så det ble større fabrikker, maskiner, skip og redskap men arbeidernes reallønn og kjøpekraft forble den samme. Ved begynnelsen av 1900-tallet var de fleste arbeidsavtaler mellom bedrifter og arbeidstaker inngått muntlig eller individuelt. Det var her at fagforeninger og organisasjoner begynte å se dagens lys, som et ledd mellom bedriften og arbeidstaker for å forhandle avtaler om ansettelse.
 
 Et stort og det eneste virkemiddelet arbeiderne hadde for å kjempe imot bedriftene var streik. Med vekst i organisasjonene ble også mulighetene for konflikter større.
+
+*#millioner av dager??? arbeidstimer? spøre daniel om han var trøtr da dette ble skrevet! viktig.*
 
 Dette kan man spesielt se i 1924 (Figur 3.4), hvor arbeidsstansen var på hele 5.1 millioner tapte arbeidsdager.
 
