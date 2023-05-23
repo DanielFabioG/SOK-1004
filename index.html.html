@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_751d1662eb77b56db43364ca5a208f28 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_751d1662eb77b56db43364ca5a208f28" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_751d1662eb77b56db43364ca5a208f28 = L.map(
+                "map_751d1662eb77b56db43364ca5a208f28",
+                {
+                    center: [69.649205, 18.955324],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fb658c08b848543d75afa1a572159c29 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var marker_0f8289c373bf5eb773e2059697bf5435 = L.marker(
+                [69.6671382, 18.9582144],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_7a0e17916ac26f9f29b9356a2594c8ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0f8289c373bf5eb773e2059697bf5435.setIcon(icon_7a0e17916ac26f9f29b9356a2594c8ef);
+        
+    
+        var popup_64f78cc54a59e3d031965848ffca0d6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d294ae610c8c2213d493965f31cf1ac8 = $(`<div id="html_d294ae610c8c2213d493965f31cf1ac8" style="width: 100.0%; height: 100.0%;">BREIVIKTUNNELEN</div>`)[0];
+                popup_64f78cc54a59e3d031965848ffca0d6d.setContent(html_d294ae610c8c2213d493965f31cf1ac8);
+            
+        
+
+        marker_0f8289c373bf5eb773e2059697bf5435.bindPopup(popup_64f78cc54a59e3d031965848ffca0d6d)
+        ;
+
+        
+    
+    
+            marker_0f8289c373bf5eb773e2059697bf5435.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 7350803.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_50e1b4fc8bda1b804786000eca9e4dc4 = L.marker(
+                [69.6722623, 18.9723715],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_865abd08dec6766bc46da60de676de88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_50e1b4fc8bda1b804786000eca9e4dc4.setIcon(icon_865abd08dec6766bc46da60de676de88);
+        
+    
+        var popup_8764cfb9b240536a770e12484c7c6fa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_797f831865cb4629bba870b3f3a5beeb = $(`<div id="html_797f831865cb4629bba870b3f3a5beeb" style="width: 100.0%; height: 100.0%;">Breivika</div>`)[0];
+                popup_8764cfb9b240536a770e12484c7c6fa4.setContent(html_797f831865cb4629bba870b3f3a5beeb);
+            
+        
+
+        marker_50e1b4fc8bda1b804786000eca9e4dc4.bindPopup(popup_8764cfb9b240536a770e12484c7c6fa4)
+        ;
+
+        
+    
+    
+            marker_50e1b4fc8bda1b804786000eca9e4dc4.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 23974810.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b4111d96e50135d093cc693b5c10f229 = L.marker(
+                [69.6851898, 18.9858965],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_e710df841f05d65c6dfc4e014cebf7aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b4111d96e50135d093cc693b5c10f229.setIcon(icon_e710df841f05d65c6dfc4e014cebf7aa);
+        
+    
+        var popup_bc0dff3098dd3e73308088ebfe1123cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_834e4fc812831a31dbe4c8cdaed972ab = $(`<div id="html_834e4fc812831a31dbe4c8cdaed972ab" style="width: 100.0%; height: 100.0%;">Hansine Hansens veg</div>`)[0];
+                popup_bc0dff3098dd3e73308088ebfe1123cb.setContent(html_834e4fc812831a31dbe4c8cdaed972ab);
+            
+        
+
+        marker_b4111d96e50135d093cc693b5c10f229.bindPopup(popup_bc0dff3098dd3e73308088ebfe1123cb)
+        ;
+
+        
+    
+    
+            marker_b4111d96e50135d093cc693b5c10f229.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 1502474.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7a4bf705e1ee43b1c22d835d039c9a1f = L.marker(
+                [69.642391, 18.981428],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_2a94a34b459420f971fd9775068533bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7a4bf705e1ee43b1c22d835d039c9a1f.setIcon(icon_2a94a34b459420f971fd9775068533bb);
+        
+    
+        var popup_84cedbc1ad308797fd5f2fceae06c470 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e073f626e61ccb359c77c63446064a92 = $(`<div id="html_e073f626e61ccb359c77c63446064a92" style="width: 100.0%; height: 100.0%;">Hungeren</div>`)[0];
+                popup_84cedbc1ad308797fd5f2fceae06c470.setContent(html_e073f626e61ccb359c77c63446064a92);
+            
+        
+
+        marker_7a4bf705e1ee43b1c22d835d039c9a1f.bindPopup(popup_84cedbc1ad308797fd5f2fceae06c470)
+        ;
+
+        
+    
+    
+            marker_7a4bf705e1ee43b1c22d835d039c9a1f.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 12853159.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f2e06c4cb51a81713dffdecaf2bc5ef5 = L.marker(
+                [69.69590819999999, 18.8837404],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_4c1e732864c48a889099a531a9a3b1b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f2e06c4cb51a81713dffdecaf2bc5ef5.setIcon(icon_4c1e732864c48a889099a531a9a3b1b1);
+        
+    
+        var popup_a523ca83ea9065ccbad0a541471406fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5a0c3bfdf90f46db78739b2d2d55baa = $(`<div id="html_a5a0c3bfdf90f46db78739b2d2d55baa" style="width: 100.0%; height: 100.0%;">Kvaløysletta nord</div>`)[0];
+                popup_a523ca83ea9065ccbad0a541471406fa.setContent(html_a5a0c3bfdf90f46db78739b2d2d55baa);
+            
+        
+
+        marker_f2e06c4cb51a81713dffdecaf2bc5ef5.bindPopup(popup_a523ca83ea9065ccbad0a541471406fa)
+        ;
+
+        
+    
+    
+            marker_f2e06c4cb51a81713dffdecaf2bc5ef5.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 6553527.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c573d6655fbad9b41658f9bb9caa556e = L.marker(
+                [69.69590819999999, 18.8837404],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_19c393add49b3986b68af7679970ef2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c573d6655fbad9b41658f9bb9caa556e.setIcon(icon_19c393add49b3986b68af7679970ef2c);
+        
+    
+        var popup_87dd982d54dd232527aa6743306a17e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_337062b95147a2af1841af84d0612c28 = $(`<div id="html_337062b95147a2af1841af84d0612c28" style="width: 100.0%; height: 100.0%;">Kvaløysletta sør</div>`)[0];
+                popup_87dd982d54dd232527aa6743306a17e2.setContent(html_337062b95147a2af1841af84d0612c28);
+            
+        
+
+        marker_c573d6655fbad9b41658f9bb9caa556e.bindPopup(popup_87dd982d54dd232527aa6743306a17e2)
+        ;
+
+        
+    
+    
+            marker_c573d6655fbad9b41658f9bb9caa556e.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 14520779.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6efb0fa39db4dcbac4e7029cb75a71ec = L.marker(
+                [59.4788328, 6.0300858],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_c111ea2027daf7bef147e1b07a2b171c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6efb0fa39db4dcbac4e7029cb75a71ec.setIcon(icon_c111ea2027daf7bef147e1b07a2b171c);
+        
+    
+        var popup_dd41c5f10186006208fd0ba7b7272db6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef233556a225bb400f2bd8a56b6230b9 = $(`<div id="html_ef233556a225bb400f2bd8a56b6230b9" style="width: 100.0%; height: 100.0%;">Kvaløyvegen</div>`)[0];
+                popup_dd41c5f10186006208fd0ba7b7272db6.setContent(html_ef233556a225bb400f2bd8a56b6230b9);
+            
+        
+
+        marker_6efb0fa39db4dcbac4e7029cb75a71ec.bindPopup(popup_dd41c5f10186006208fd0ba7b7272db6)
+        ;
+
+        
+    
+    
+            marker_6efb0fa39db4dcbac4e7029cb75a71ec.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 4573449.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42bb6646c1d5620999ad902035f70734 = L.marker(
+                [69.6580718, 18.9470729],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_9f33753cbebd1b7f16c4ab3f8b95f759 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_42bb6646c1d5620999ad902035f70734.setIcon(icon_9f33753cbebd1b7f16c4ab3f8b95f759);
+        
+    
+        var popup_0e6f58c4b38c5cc37b8dc71b8d375215 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0cbcff2519a469f060eda809b3b9182 = $(`<div id="html_d0cbcff2519a469f060eda809b3b9182" style="width: 100.0%; height: 100.0%;">Langnestunnelen</div>`)[0];
+                popup_0e6f58c4b38c5cc37b8dc71b8d375215.setContent(html_d0cbcff2519a469f060eda809b3b9182);
+            
+        
+
+        marker_42bb6646c1d5620999ad902035f70734.bindPopup(popup_0e6f58c4b38c5cc37b8dc71b8d375215)
+        ;
+
+        
+    
+    
+            marker_42bb6646c1d5620999ad902035f70734.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 16621038.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3e281cdf68922f12fe7dbfe76d04ef2 = L.marker(
+                [59.34884599999999, 18.011921],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_fe3c7ef46325c60c3450b1d7b3fd07f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d3e281cdf68922f12fe7dbfe76d04ef2.setIcon(icon_fe3c7ef46325c60c3450b1d7b3fd07f8);
+        
+    
+        var popup_6215a772f4e6f27d4328ebfc3c9f615f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2544324ca0cb7bd264c4a7d26cf511a = $(`<div id="html_e2544324ca0cb7bd264c4a7d26cf511a" style="width: 100.0%; height: 100.0%;">Postterminalen</div>`)[0];
+                popup_6215a772f4e6f27d4328ebfc3c9f615f.setContent(html_e2544324ca0cb7bd264c4a7d26cf511a);
+            
+        
+
+        marker_d3e281cdf68922f12fe7dbfe76d04ef2.bindPopup(popup_6215a772f4e6f27d4328ebfc3c9f615f)
+        ;
+
+        
+    
+    
+            marker_d3e281cdf68922f12fe7dbfe76d04ef2.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 14101155.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7fa06aed4b5efbc491207a4eb4e7ebe3 = L.marker(
+                [69.6588217, 18.9355675],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_ccf3c1186a27254283f173b7d27e3371 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7fa06aed4b5efbc491207a4eb4e7ebe3.setIcon(icon_ccf3c1186a27254283f173b7d27e3371);
+        
+    
+        var popup_2cc42c94c3441488056d7a086f6d55f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90a5cff7dc234711fb64cbe47edf933c = $(`<div id="html_90a5cff7dc234711fb64cbe47edf933c" style="width: 100.0%; height: 100.0%;">Prestvannet</div>`)[0];
+                popup_2cc42c94c3441488056d7a086f6d55f1.setContent(html_90a5cff7dc234711fb64cbe47edf933c);
+            
+        
+
+        marker_7fa06aed4b5efbc491207a4eb4e7ebe3.bindPopup(popup_2cc42c94c3441488056d7a086f6d55f1)
+        ;
+
+        
+    
+    
+            marker_7fa06aed4b5efbc491207a4eb4e7ebe3.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 3504951.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1b016ec30f4937c11a125cadec77945 = L.marker(
+                [69.6961978, 18.9657433],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_e5be47c48aa0e1e0914d5559b6fdf89f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f1b016ec30f4937c11a125cadec77945.setIcon(icon_e5be47c48aa0e1e0914d5559b6fdf89f);
+        
+    
+        var popup_43e61b57ff5411ba4e2eefcb5bfe2f89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa3963a65ddd78454e4b9ec8d98a2242 = $(`<div id="html_aa3963a65ddd78454e4b9ec8d98a2242" style="width: 100.0%; height: 100.0%;">Ringvegen</div>`)[0];
+                popup_43e61b57ff5411ba4e2eefcb5bfe2f89.setContent(html_aa3963a65ddd78454e4b9ec8d98a2242);
+            
+        
+
+        marker_f1b016ec30f4937c11a125cadec77945.bindPopup(popup_43e61b57ff5411ba4e2eefcb5bfe2f89)
+        ;
+
+        
+    
+    
+            marker_f1b016ec30f4937c11a125cadec77945.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 376019.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_96bc0651f5be9dc628e30ea346457292 = L.marker(
+                [69.692345, 18.8991637],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_8f1eff8ca3ffad1d69a599aea1add13a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_96bc0651f5be9dc628e30ea346457292.setIcon(icon_8f1eff8ca3ffad1d69a599aea1add13a);
+        
+    
+        var popup_92fccdd14306f332b1029f3e6e046e2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9424938558d99ac44fe24bf28d502c8 = $(`<div id="html_d9424938558d99ac44fe24bf28d502c8" style="width: 100.0%; height: 100.0%;">Sandnessundbrua</div>`)[0];
+                popup_92fccdd14306f332b1029f3e6e046e2f.setContent(html_d9424938558d99ac44fe24bf28d502c8);
+            
+        
+
+        marker_96bc0651f5be9dc628e30ea346457292.bindPopup(popup_92fccdd14306f332b1029f3e6e046e2f)
+        ;
+
+        
+    
+    
+            marker_96bc0651f5be9dc628e30ea346457292.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 17161438.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb360229a11bc4bc2e8a3bbb69cb779b = L.marker(
+                [69.6518165, 18.9451032],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_5b9507cff49998d70148384c9149be46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_eb360229a11bc4bc2e8a3bbb69cb779b.setIcon(icon_5b9507cff49998d70148384c9149be46);
+        
+    
+        var popup_030f632b8953d85f0d6f9fb2f9eef435 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15c31bbad6d983b340ec1c959f9bed15 = $(`<div id="html_15c31bbad6d983b340ec1c959f9bed15" style="width: 100.0%; height: 100.0%;">Sentrumstangenten</div>`)[0];
+                popup_030f632b8953d85f0d6f9fb2f9eef435.setContent(html_15c31bbad6d983b340ec1c959f9bed15);
+            
+        
+
+        marker_eb360229a11bc4bc2e8a3bbb69cb779b.bindPopup(popup_030f632b8953d85f0d6f9fb2f9eef435)
+        ;
+
+        
+    
+    
+            marker_eb360229a11bc4bc2e8a3bbb69cb779b.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 10910188.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_375543e6913faf22b93487d51d16553e = L.marker(
+                [69.6800892, 18.9877692],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_61ee126fad19dc53834eb8c4a578722d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_375543e6913faf22b93487d51d16553e.setIcon(icon_61ee126fad19dc53834eb8c4a578722d);
+        
+    
+        var popup_2a03e35271fc79bc318eeba84e7de66f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e88dcd5833c01d3abac6c96a0188e5da = $(`<div id="html_e88dcd5833c01d3abac6c96a0188e5da" style="width: 100.0%; height: 100.0%;">Stakkevollvegen</div>`)[0];
+                popup_2a03e35271fc79bc318eeba84e7de66f.setContent(html_e88dcd5833c01d3abac6c96a0188e5da);
+            
+        
+
+        marker_375543e6913faf22b93487d51d16553e.bindPopup(popup_2a03e35271fc79bc318eeba84e7de66f)
+        ;
+
+        
+    
+    
+            marker_375543e6913faf22b93487d51d16553e.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 4210216.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c7f68d727e49426cdc32566bbd77680 = L.marker(
+                [69.65160569999999, 18.9764015],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_a6d4989717dd95648cf23937db1afa25 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6c7f68d727e49426cdc32566bbd77680.setIcon(icon_a6d4989717dd95648cf23937db1afa25);
+        
+    
+        var popup_bcbcbaa1f750d42191c118ba5c2106ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02484e055e0854563474e769b4a21309 = $(`<div id="html_02484e055e0854563474e769b4a21309" style="width: 100.0%; height: 100.0%;">TROMSØBRUA</div>`)[0];
+                popup_bcbcbaa1f750d42191c118ba5c2106ab.setContent(html_02484e055e0854563474e769b4a21309);
+            
+        
+
+        marker_6c7f68d727e49426cdc32566bbd77680.bindPopup(popup_bcbcbaa1f750d42191c118ba5c2106ab)
+        ;
+
+        
+    
+    
+            marker_6c7f68d727e49426cdc32566bbd77680.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 13698362.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5cf709ee1d17f9f5e812bd4cf7593ac = L.marker(
+                [69.65160569999999, 18.9764015],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_26cdee0224923a33d7d329bdccc98ad3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f5cf709ee1d17f9f5e812bd4cf7593ac.setIcon(icon_26cdee0224923a33d7d329bdccc98ad3);
+        
+    
+        var popup_19e90e43487be35c09694736dcec0f8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1a28476586fe51cc2222ea6284b63f7 = $(`<div id="html_a1a28476586fe51cc2222ea6284b63f7" style="width: 100.0%; height: 100.0%;">Tromsøbrua avkjøring</div>`)[0];
+                popup_19e90e43487be35c09694736dcec0f8a.setContent(html_a1a28476586fe51cc2222ea6284b63f7);
+            
+        
+
+        marker_f5cf709ee1d17f9f5e812bd4cf7593ac.bindPopup(popup_19e90e43487be35c09694736dcec0f8a)
+        ;
+
+        
+    
+    
+            marker_f5cf709ee1d17f9f5e812bd4cf7593ac.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 5161805.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac851a58d7c99ca3aaac0247be37387f = L.marker(
+                [69.6742399, 19.0086137],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_d1f069160dccc16fa1abeae28696e3a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ac851a58d7c99ca3aaac0247be37387f.setIcon(icon_d1f069160dccc16fa1abeae28696e3a5);
+        
+    
+        var popup_22a9c203dd7aa31beccfb661e674f9f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5680ac5258999d4df54d5207f140a0c7 = $(`<div id="html_5680ac5258999d4df54d5207f140a0c7" style="width: 100.0%; height: 100.0%;">Tromsøysundtunnelen T1</div>`)[0];
+                popup_22a9c203dd7aa31beccfb661e674f9f2.setContent(html_5680ac5258999d4df54d5207f140a0c7);
+            
+        
+
+        marker_ac851a58d7c99ca3aaac0247be37387f.bindPopup(popup_22a9c203dd7aa31beccfb661e674f9f2)
+        ;
+
+        
+    
+    
+            marker_ac851a58d7c99ca3aaac0247be37387f.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 5950520.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ff1c3aff6890ffc1bf3ba65bd5c5250 = L.marker(
+                [69.6742399, 19.0086137],
+                {}
+            ).addTo(map_751d1662eb77b56db43364ca5a208f28);
+        
+    
+            var icon_53c84068aedfb329fb250d2db4c1439b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6ff1c3aff6890ffc1bf3ba65bd5c5250.setIcon(icon_53c84068aedfb329fb250d2db4c1439b);
+        
+    
+        var popup_362243d9a9ad6ae361e5a4acc53a7551 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0ebc7dcf1f466cd6e1a16ddd489bac3 = $(`<div id="html_d0ebc7dcf1f466cd6e1a16ddd489bac3" style="width: 100.0%; height: 100.0%;">Tromsøysundtunnelen T2</div>`)[0];
+                popup_362243d9a9ad6ae361e5a4acc53a7551.setContent(html_d0ebc7dcf1f466cd6e1a16ddd489bac3);
+            
+        
+
+        marker_6ff1c3aff6890ffc1bf3ba65bd5c5250.bindPopup(popup_362243d9a9ad6ae361e5a4acc53a7551)
+        ;
+
+        
+    
+    
+            marker_6ff1c3aff6890ffc1bf3ba65bd5c5250.bindTooltip(
+                `<div>
+                     Totale passeringer siden 2020: 5656487.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
