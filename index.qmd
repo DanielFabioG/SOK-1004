@@ -25,12 +25,11 @@ SOK-1004-1 22H Økonomiske emner og programmering
 Alle oppgaver gitt gjennom dette kurset finnes i "Cases" seksjonen, mens alt som tilhører prosjektoppgavene tilhører "Prosjekt" seksjonen.
 
 ```{=html}
-<div class="center">On the left are my graded assignments that are delivered in R, on the Right is my Data Science project</div>
 <div class="center" style="display: flex; justify-content: space-between; margin-top: 20px;">
       <div style="width: 45%; position: relative;">
         <div class="content-overlay">
-          <div class="text-overlay">Assignments</div>
-            <a href="/SOK-1005/Assignments/Assignment1.html" class="larger">Assignment 1</a>
+          <div class="text-overlay">Cases</div>
+            <a href="/SOK-1004/Cases/Case_1_reworked.html" class="larger">Case 1</a>
             <br>
             <a href="/SOK-1005/Assignments/Assignment2.html" class="larger">Assignment 2</a>
             <br>
