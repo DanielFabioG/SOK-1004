@@ -42,7 +42,7 @@ Alle oppgaver gitt gjennom dette kurset finnes i "Cases" seksjonen, mens alt som
     </div>
     <div style="width: 45%; position: relative;">
         <div class="content-overlay">
-          <div class="text-overlay">Project</div>
+          <div class="text-overlay">Prosjekt</div>
             <a href="/SOK-1005/Prosjektoppgave/index.html" class="larger">Full project</a>
             <br>
             <a href="/SOK-1005/Prosjektoppgave/3_11_Task1_SOK1005_Project_V23.html" class="larger">Task 1</a>
