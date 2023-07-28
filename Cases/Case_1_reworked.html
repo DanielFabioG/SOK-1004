@@ -99,7 +99,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="Case_1_reworked_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <style>
     .quarto-title-block .quarto-title-banner {
-      background: darkblueslate;
+      background: darkslateblue;
     }
     </style>
 
@@ -156,6 +156,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<p>For å gå tilbake til hovedsiden trykker du <a href="https://danielfabiog.github.io/SOK-1004/">her</a>.</p>
 <p>Denne oppgaven er tilpasset fra <a href="https://uit-sok-1004-h21.github.io/case_1_bnp.html">Case 1</a>, skrevet av Øystein Myrland for kurset SOK-1004, høsten 2021. Eventuelle feil og mangler er mine egne. Rett spørsmål og kommentarer til <a href="mailto:even.c.hvinden@uit.no">even.c.hvinden@uit.no</a>.</p>
 <section id="instruksjoner" class="level2">
 <h2 class="anchored" data-anchor-id="instruksjoner">Instruksjoner</h2>
@@ -447,7 +448,7 @@ $dataset
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_long <span class="sc">%&gt;%</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> tid, <span class="at">y =</span> bnp, <span class="at">color =</span> var)) <span class="sc">+</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()<span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">1970</span>, <span class="dv">2021</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>))<span class="sc">+</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>(<span class="at">scale =</span> <span class="dv">1</span>))<span class="sc">+</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
@@ -465,7 +466,7 @@ $dataset
 <p><img src="Case_1_reworked_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="768"></p>
 </div>
 </div>
-<p>Merknad fra meg selv: Geom_smooth ser ikke bra ut på figuren men inkluderer det fordi Even ville ha det med.</p>
+<p>For å gå tilbake til hovedsiden trykker du <a href="https://danielfabiog.github.io/SOK-1004/">her</a>.</p>
 </section>
 
 </main>
