@@ -12,6 +12,8 @@ toc: true
 warning: false
 ---
 
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
+
 Denne oppgaven er tilpasset fra [Case 1](https://uit-sok-1004-h21.github.io/case_1_bnp.html), skrevet av Øystein Myrland for kurset SOK-1004, høsten 2021. Eventuelle feil og mangler er mine egne. Rett spørsmål og kommentarer til [even.c.hvinden\@uit.no](mailto:even.c.hvinden@uit.no).
 
 ## Instruksjoner
@@ -236,3 +238,5 @@ df_long %>%
   scale_color_discrete(labels = c('Løpende BNP', 'Fast BNP'))+
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50")
 ```
+
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).

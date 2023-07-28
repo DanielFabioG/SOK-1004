@@ -56,23 +56,15 @@ Betrakt følgende figur:
 
 ```{r}
 df %>%
-  
   mutate(gdp = gdp/10^12) %>%
-
   mutate(co2 = co2/10^3) %>%
-
   filter(country %in% list) %>% 
-  
-  ggplot(aes(x=gdp, y=co2, color = country)) %>%
-  
-  + geom_point() %>%
-  
-  + geom_smooth(se = FALSE) %>%
-  
-  + labs(y = "CO2", x = "GDP", title = "GDP vs CO2", subtitle = "Production-based C02 emissions, billions of tons. 
-GDP in trillions of USD, constant 2011 prices at purchasing power parity. 1850-2020.", color = "Country") %>%
-  
-  + theme_bw()
+  ggplot(aes(x=gdp, y=co2, color = country))+
+  geom_point()+
+  geom_smooth(se = FALSE)+
+  labs(y = "CO2", x = "GDP", title = "GDP vs CO2", subtitle = "Production-based C02 emissions, billions of tons. 
+GDP in trillions of USD, constant 2011 prices at purchasing power parity. 1850-2020.", color = "Country")+
+  theme_bw()
 ```
 
 Kommandoen `geom_smooth()` bruker en såkalt lokal regresjon til å tegne en kurve gjennom datapunktene. Dere kan tenke på dette som en gjennomsnittlig sammenheng, eller at man har tegnet en strek gjennom datapunktene med en penn.
@@ -88,8 +80,6 @@ Gi en fullstendig og nøyaktig beskrivelse av figuren. Tolk helningen på linjen
 
 *Grafen har imidlertid noen svakheter. Den klarer ikke nøyaktig å markere hvilke årstall som dataene representerer. Dessuten er en betydelig mengde datapunkter konsentrert i den venstre delen av figuren. Dette kunne ha vært avbildet mer effektivt med en logaritmisk skala for bedre å spre datapunktene og gjøre tolkningen mer oversiktlig.*
 
-*Teksten er forbedret av AI.*
-
 ### Oppgave Ib
 
 Vi betrakter nå et normalisert mål på sammenhengen CO2-utslipp og inntekt. La $CO2_{t}$ og $BNP_{t}$ være henholdsvis årlige utslipp av CO2 og brutto nasjonalprodukt i år $t$. Vi måler $CO2_{t}$ i kilogram og $BNP_{t}$ i kjøpekraftjusterte USD ved faste 2011-priser. Vi kan definere karbonintensiteten i produksjon som $CI_{t}=CO{2}_{t}/BNP_{t}$, altså antall kilogram CO2 per USD i verdiskapning.
@@ -98,18 +88,26 @@ Lag en figur som viser karbonintensiteten $CI_{t}$ til de fem største økonomie
 
 ```{r}
 df %>%
-  mutate(ci = co2/gdp) %>%
+  mutate(ci = (co2/10^3)/(gdp/10^12)) %>%
   filter(country %in% list) %>%
-  ggplot(aes(x=year, y=ci, color=country))+
-  theme_classic()+
-  geom_line(linewidth=1)+
-  scale_x_continuous(limits=c(1850, 2020),
-                              expand=c(0,0))+
-  labs(title= "Karbonintensiteten til de fem største økonomiene", y="Kg CO2 utslipp per dollar av BNP", color="Land", x="")+
+  ggplot(aes(x=year, y=ci, color=country)) +
+  theme_minimal() +
+  geom_point(size=1.1) +
+  geom_smooth(se=FALSE) +
+  scale_x_continuous(limits=c(1850, 2020), expand=c(0,0)) +
+  labs(title= "Karbonintensiteten til de fem største økonomiene", 
+       y="Ton CO2 utslipp per milliard dollar av BNP", 
+       color="Land", x="") +
   theme(legend.position = "bottom")
 ```
 
-*\[*Figuren viser de dem største verdensøkonomiene og hvor mye kg CO2 produseres for per dollar med BNP. Populasjonsøkning og BNP økning over tid mikset med alternative energikilder gjør at alle land har en synkende trend av kg CO2-utslipp per dollar av GDP. I kina øker karbonintensiteten og produksjon kraftig etter at landet går gjennom et stort regjeringsskifte. I tyskland strupes produksjon og C02 emisjon per dollar av BNP når landet går inn i andre verdenskrig.*\]*
+*Grafen illustrerer en sammenligning mellom verdens fem største økonomier, der den spesifikt fremhever forholdet mellom produksjon av CO2 (i kilogram) per produsert dollar i brutto nasjonalprodukt (BNP).*
+
+*Et viktig aspekt som grafen viser, er effekten av befolkningsvekst, økonomisk vekst og introduksjonen av alternative energikilder over tid. Alle de representerte landene viser en generell nedadgående trend i forholdet mellom kg CO2-utslipp per produsert dollar i BNP, noe som indikerer en økende effektivitet og/eller bruk av mindre karbonintensive teknologier.*
+
+*Spesielt er det bemerkelsesverdige endringer i enkelte land som Kina og Tyskland. I Kina observeres en markant økning i karbonintensitet og produksjon etter et betydelig skifte i landets regjeringsstruktur. Samtidig ser vi i Tyskland en kraftig reduksjon i både produksjon og CO2-utslipp per dollar av BNP under landets involvering i andre verdenskrig.*
+
+*Disse trekkene understreker hvordan både økonomiske og politiske endringer kan ha dype innvirkninger på et lands karbonavtrykk og deres forhold til den globale økonomien.*
 
 ### Oppgave Ic
 
@@ -118,41 +116,39 @@ Undersøk hvorvidt bruken av kull som energikilde kan forklare forskjellen i kar
 **Figur 1**
 
 ```{r}
-
-df_tibble %>%
-  
+df %>%
   mutate(coal_co2 = coal_co2/10^3) %>%
-  
-   filter(Land %in% list) %>%
-  
- ggplot(aes(x=År, y=coal_co2, color=Land)) +
-  
-  geom_line(size=1.1) +
-  
-  xlim(1850, 2020) +
-  
-  ylab("CO2, billioner av tonn") +
-  
-  ggtitle("Årlig utslipp av CO2 fra kull")
-
-df_tibble %>%
-  
-   filter(Land %in% list) %>%
-  
-  ggplot(aes(x=År, y=co2_per_gdp, color=Land)) +
-  
-  geom_line(size=1.1) +
-  
-  xlim(1850, 2020) +
-  
-  ggtitle("Karbonintensitet til de fem største økonomiene") +
-  
-  ylab("Kg CO2 utslipp per dollar av BNP")
-
-
+  filter(country %in% list) %>%
+  ggplot(aes(x=year, y=coal_co2, color=country))+
+  geom_line(size=1)+
+  scale_x_continuous(limits=c(1850, 2020), expand=c(0,0))+
+  labs(title= "Årlig utslipp av CO2 fra kull", x="", 
+       y="CO2, billioner av tonn",
+       color="Land")+
+  theme_minimal()+
+  theme(legend.position = "bottom")
 ```
 
-*\[Figur 1 viser årlig karbonutslipp for de fem største økonomiene målt i billioner av tonn. Kina utmerker seg veldig med en stor vekst siden 2000-tallet med kull som energikilde. Figur to viser karbonintensiteten i produksjon til de fem landene. Japan, tyskland og amerika har en nedgående helning av kull som energikilde, og har også en synkende trend av karbonutslipp per dollar av BNP. India og kina viser en annen trend hvor kull brukes i større grad som energikilde og har en økende trend av co2-utslipp. Selv om dette nødvendigvis ikke viser store utslag på kg co2 per dollar av BNP, er dette mer på grunn av at disse to landene har mye større populasjon.\]*
+*Figur 1 fremstiller det årlige karbonutslippet fra verdens fem største økonomier, målt i billioner tonn. Kina skiller seg markant ut med en betydelig vekst i karbonutslipp siden årtusenskiftet, noe som hovedsakelig kan tilskrives landets økende bruk av kull som energikilde.*
+
+```{r}
+df %>%
+  mutate(ci = (co2/10^3)/(gdp/10^12)) %>%
+  filter(country %in% list) %>%
+  ggplot(aes(x=year, y=ci, color=country))+
+  theme_minimal()+
+  geom_point(size=1.1)+
+  geom_smooth(se=FALSE)+
+  scale_x_continuous(limits=c(1850, 2020), expand=c(0,0))+
+  labs(title= "Karbonintensiteten til de fem største økonomiene", 
+       y="Ton CO2 utslipp per milliard dollar av BNP", 
+       color="Land", x="") +
+  theme(legend.position = "bottom")
+```
+
+*På den andre siden gir Figur 2 en detaljert fremstilling av karbonintensiteten i produksjonen i disse fem landene. Det er verdt å merke seg at Japan, Tyskland og USA viser en nedadgående trend både i bruk av kull som energikilde og i CO2-utslipp per produsert dollar i BNP.*
+
+*I kontrast til dette, viser India og Kina en økende trend i bruk av kull som energikilde, noe som reflekteres i deres økende CO2-utslipp. Selv om dette ikke nødvendigvis resulterer i en markant økning i kg CO2 per dollar av BNP, kan dette i stor grad tilskrives det faktum at disse to landene har betydelig større befolkninger. Dermed vil det totale utslippet være større, selv om utslippet per innbygger eller per produsert dollar av BNP kanskje ikke øker i samme grad.*
 
 ## II. Konsumbaserte CO2-utslipp
 
@@ -162,7 +158,13 @@ I den foregående analysen har vi slått fast at Kina har høy karbonintensitet 
 
 Forklar hvordan konsumbaserte CO2-utslipp er konstruert og hvordan vi skal tolke den.
 
-*\[Konsumbaserte CO2-utslipp er nasjonale/regionale CO2-utslipp som er justert etter eksport og import. Om et land produserer mye CO2 og eksporterer dette ut så trekkes dette fra landets konsumbaserte CO2-utslipp. I motsatt tilfelle blir CO2-produksjon som importeres lagt til. Variablen viser hvor mye et land konsumerer CO2, i produksjon selv og eksport inn. Om et land selv ikke produserer mye CO2 men importerer fra andre land kan dette tolkes via konsumbasert CO2-utslipp.\]*
+*Konsumbaserte CO2-utslipp er en beregning av nasjonale eller regionale CO2-utslipp, der man tar hensyn til inn- og utgående handel. Dette gir et mer nøyaktig bilde av et lands faktiske karbonfotavtrykk ved å vurdere karbonutslippet fra både det de produserer selv og det de forbruker gjennom import.*
+
+*Når et land produserer varer som genererer store mengder CO2 og deretter eksporterer disse varene, reduseres landets konsumbaserte CO2-utslipp tilsvarende. Det vil si at CO2-utslippet som er tilknyttet produksjonen av disse eksporterte varene, ikke regnes som en del av det eksporterende landets konsumbaserte utslipp.*
+
+*På den annen side, hvis et land importerer varer som genererer store mengder CO2 i løpet av produksjonen, legges disse utslippene til i det importørende landets konsumbaserte CO2-utslipp. Dette gjenspeiler at selv om landet kanskje ikke selv produserer store mengder CO2, bidrar det indirekte til global oppvarming gjennom sitt forbruk av importerte varer.*
+
+*På denne måten gir konsumbaserte CO2-utslipp et mer nyansert og komplett bilde av et lands bidrag til globale CO2-utslipp, ved å vurdere både nasjonal produksjon og internasjonal handel.*
 
 ### Oppgave IIb
 
@@ -171,24 +173,23 @@ Lag en figur som viser utviklingen av konsumbasert CO2 per person og totale, kon
 **Hint:** Hvis du bruker `geom_point()` så kan spesifisere én av variablene ved tilvalget `size` i `aes()`.
 
 ```{r}
-df_tibble %>%
-  
+df %>%
   mutate(cumulative_co2= cumulative_co2/10^3) %>%
-  
-  filter(Land %in% list) %>%
-  
-ggplot(aes(x=År, y=consumption_co2_per_capita, color=Land, size=cumulative_co2)) +
-  
-  geom_point() +
-  
-  xlim(1990, 2020) +
-  
-  labs(title = "Konsumbasert co2 per person og totale utslipp", subtitle="Totale utslipp vises i størrelsen på boblene", y="co2 per person, i tonn", size="Billioner av tonn") +
-  
-  scale_size_continuous(labels = scales::comma)
+  filter(country %in% list) %>%
+  ggplot(aes(x=year, y=consumption_co2_per_capita, 
+             color=country, size=cumulative_co2))+
+  geom_point()+
+  scale_x_continuous(limits=c(1990, 2020))+
+  labs(title = "Konsumbasert co2 per person og totale utslipp", subtitle="Totale utslipp vises i størrelsen på boblene", y="co2 per person, i tonn", size="Billioner av tonn", colour="Land", x="")+
+  scale_size_continuous(labels = scales::comma)+
+  theme_minimal()
 ```
 
-*\[Figuren viser hvor mye konsumbasert CO2 per person som produseres i hvert land målt i tonn. Det er ikke regnet med eksport, kun nasjonalt/regionalt. Størrelsen på prikkene viser hvor mye billioner tonn som totalt utslippes hvert år av C02 også ekskludert import.\]*
+*Grafen fremstiller mengden konsumbaserte CO2-utslipp per innbygger i hvert land, målt i tonn. Det er viktig å merke seg at utslippene som er inkludert her, kun gjelder nasjonale eller regionale utslipp, det vil si at de ikke tar hensyn til CO2 knyttet til eksporterte varer.*
+
+*Størrelsen på hvert punkt på grafen representerer det totale volumet av CO2-utslipp for det aktuelle landet, uttrykt i milliarder tonn per år. Igjen er dette kun basert på utslipp som skjer innenfor landets grenser, og ekskluderer utslipp som er knyttet til produksjon av varer for eksport.*
+
+*Dermed gir figuren et visuelt bilde av hvert lands interne produksjon av CO2, både på en per person basis og som en total årlig sum, og tillater dermed for en sammenligning av de relative CO2-utslippene mellom forskjellige land.*
 
 ## III. Produksjon- og konsumbaserte utslipp
 
@@ -196,21 +197,23 @@ Betrakt følgende figur, og gi en konkret forklaring på hva den viser.
 
 ```{r}
 df %>%
-
   filter(country %in% list) %>% 
-
-  ggplot(aes(x=year, y=trade_co2_share, color = country)) %>%
-  
-  + xlim(1990,2020) %>%
-  
-  + geom_line(size = 1.5) %>%
-  
-  + geom_hline(yintercept=0) %>%
-  
-  + labs(x = "Year", y = "Traded CO2 share", title = "Traded CO2 as share of production-based emissions", subtitle = "CO2 embedded in trade. Share of production based emissions. Percent. 1950-2020.
-Positive (negative) value indicates net imports (export) of CO2 emissions.", color = "Country") %>%
-  
-  + theme_bw()
+  ggplot(aes(x=year, y=trade_co2_share, color = country))+
+  xlim(1990,2020)+
+  geom_line(size = 1.5)+
+  geom_hline(yintercept=0)+
+  labs(x = "Year", y = "Traded CO2 share", title = "Traded CO2 as share of production-based emissions", subtitle = "CO2 embedded in trade. Share of production based emissions. Percent. 1950-2020.
+Positive (negative) value indicates net imports (export) of CO2 emissions.", 
+       color = "Country")+
+  theme_minimal()
 ```
 
-*\[Figuren viser byttehandel av varer mellom økonomier målt i CO2. Den viser hvordan land som eksporterer CO2, og hvilke land som importerer CO2. Som man kan se ovenfor så eksporterer kina og india CO2, mens amerika importerer CO2 utenom en liten periode på 90-tallet. Japan og tyskland importerer mer CO2 enn de eksporterer. Y-aksen viser positiv og negativ CO2 eksport/import i prosent. Land under 0 er eksportører av CO2 mens land over 0 er importører av CO2.\]*
+*Figuren illustrerer handel mellom forskjellige økonomier uttrykt i CO2-utslipp. Den gir innsikt i hvilke land som i hovedsak eksporterer CO2-genererende varer, og hvilke land som i stor grad importerer slike varer.*
+
+*Som figuren tydelig viser, fungerer Kina og India i stor grad som nettoeksportører av CO2, det vil si at de produserer og eksporterer varer som fører til betydelige CO2-utslipp. Amerika, derimot, fungerer stort sett som en importør av CO2, bortsett fra en kort periode på 1990-tallet.*
+
+*Japan og Tyskland viser en større tendens til å importere CO2-genererende varer enn å eksportere dem. Y-aksen på grafen illustrerer nettoeksport eller nettoimport av CO2 i prosent.*
+
+*Verdier under null på y-aksen indikerer at et land er en nettoeksportør av CO2, mens verdier over null indikerer at et land er en nettoimportør av CO2. På denne måten gir figuren et klart bilde av CO2-utslipp knyttet til global handel, og hvilke land som bidrar mest til disse utslippene, enten gjennom produksjon eller forbruk.*
+
+*NB: All tekst i kursiv er forbedret via AI som hjelpemiddel.*
