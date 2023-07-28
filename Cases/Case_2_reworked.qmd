@@ -12,6 +12,8 @@ toc: true
 warning: false
 ---
 
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
+
 ## Instruksjoner
 
 Denne oppgaven skal løses interaktivt i RStudio ved å legge inn egen kode og kommentarer. Det ferdige dokumentet lagres med kandidatnummeret som navn `[kandidatnummer]_SOK1004_C2_H22.qmd` og lastes opp på deres GitHub-side. Hvis du har kandidatnummer 43, så vil filen hete `43_SOK1004_C2_H22.qmd`. Påse at koden kjører og at dere kan eksportere besvarelsen til pdf. Lever så lenken til GitHub-repositoriumet i Canvas.
@@ -73,7 +75,6 @@ Kommandoen `geom_smooth()` bruker en såkalt lokal regresjon til å tegne en kur
 
 Gi en fullstendig og nøyaktig beskrivelse av figuren. Tolk helningen på linjene og diskuter variasjon mellom og innad i landene. Drøft hvilke forhold figuren illustrerer på en god måte og hvilken informasjon som er vanskelig å tolke.
 
-\
 *Grafen fremstiller en sammenligning mellom verdens fem største økonomier og deres produksjonsbaserte CO2-utslipp i forhold til deres kjøpekraftsjusterte brutto nasjonalprodukt (BNP). Tidsperioden som er kartlagt strekker seg fra 1850 til 2020.*
 
 *Det som kan utledes fra grafen, er en tilsynelatende forbindelse mellom høyere produksjonsbaserte CO2-utslipp og et økt BNP. Likevel er det verdt å merke seg unntak, som tilfellet med USA. Her har BNP fortsatt å vokse til tross for en nedgang i produksjonsbaserte CO2-utslipp.*
@@ -217,3 +218,5 @@ Positive (negative) value indicates net imports (export) of CO2 emissions.",
 *Verdier under null på y-aksen indikerer at et land er en nettoeksportør av CO2, mens verdier over null indikerer at et land er en nettoimportør av CO2. På denne måten gir figuren et klart bilde av CO2-utslipp knyttet til global handel, og hvilke land som bidrar mest til disse utslippene, enten gjennom produksjon eller forbruk.*
 
 *NB: All tekst i kursiv er forbedret via AI som hjelpemiddel.*
+
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
