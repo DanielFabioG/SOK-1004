@@ -81,7 +81,14 @@ Kommandoen `geom_smooth()` bruker en såkalt lokal regresjon til å tegne en kur
 
 Gi en fullstendig og nøyaktig beskrivelse av figuren. Tolk helningen på linjene og diskuter variasjon mellom og innad i landene. Drøft hvilke forhold figuren illustrerer på en god måte og hvilken informasjon som er vanskelig å tolke.
 
-*\[Figuren viser de fem største økonomiene i verden og hvor høyt utslipp disse landene har av produksjonsbasert CO2 satt opp mot kjøpekraftsjustert bruttonasjonalprodukt. Dette er plottet ut fra årstallene 1850 til 2020. Det man klarer å tolke fra figuren er at det er en sammenheng mellom større produksjonsbasert co2 utslipp og høyere BNP. Men samtidig om man ser på amerika så har BNP vokst selv om det har vært en helning ned av produksjonsbasert co2. Figuren sliter med å vise nøyaktig hvilke årstall dataen representerer. Den virker også til å ha veldig mye datapunkter pakket ned i venstre del av figuren som kunne blitt representert bedre logaritmisk. \]*
+\
+*Grafen fremstiller en sammenligning mellom verdens fem største økonomier og deres produksjonsbaserte CO2-utslipp i forhold til deres kjøpekraftsjusterte brutto nasjonalprodukt (BNP). Tidsperioden som er kartlagt strekker seg fra 1850 til 2020.*
+
+*Det som kan utledes fra grafen, er en tilsynelatende forbindelse mellom høyere produksjonsbaserte CO2-utslipp og et økt BNP. Likevel er det verdt å merke seg unntak, som tilfellet med USA. Her har BNP fortsatt å vokse til tross for en nedgang i produksjonsbaserte CO2-utslipp.*
+
+*Grafen har imidlertid noen svakheter. Den klarer ikke nøyaktig å markere hvilke årstall som dataene representerer. Dessuten er en betydelig mengde datapunkter konsentrert i den venstre delen av figuren. Dette kunne ha vært avbildet mer effektivt med en logaritmisk skala for bedre å spre datapunktene og gjøre tolkningen mer oversiktlig.*
+
+*Teksten er forbedret av AI.*
 
 ### Oppgave Ib
 
@@ -90,28 +97,16 @@ Vi betrakter nå et normalisert mål på sammenhengen CO2-utslipp og inntekt. La
 Lag en figur som viser karbonintensiteten $CI_{t}$ til de fem største økonomiene (navnene er lagret i variabelen `list` over) fra 1850 til 2020. Sammenlign $CI_{t}$ med helningen fra figuren i oppgave Ia. Gi en fullstendig og nøyaktig beskrivelse av figuren. Drøft minst to forhold som du tror kan være av avgjørende betydningen for å forklare variasjonen innad og mellom land.
 
 ```{r}
-df_tibble <- as_tibble(df)
-
-# Her trenger man ikke regne ut Karbonintensiteten selv da datasettet allerede
-# inneholder variabelen ferdig utregnet.
-
-df_tibble <- df_tibble %>%
-  
-  rename(År=year, Land=country)
-
-df_tibble %>%
-  
-filter(Land %in% list) %>%
-  
-  ggplot(aes(x=År, y=co2_per_gdp, color=Land)) +
-  
-  geom_line(size=1.1) +
-  
-  xlim(1850, 2020) +
-  
-  ggtitle("Karbonintensiteten til de fem største økonomiene") +
-  
-  ylab("Kg CO2 utslipp per dollar av BNP")
+df %>%
+  mutate(ci = co2/gdp) %>%
+  filter(country %in% list) %>%
+  ggplot(aes(x=year, y=ci, color=country))+
+  theme_classic()+
+  geom_line(linewidth=1)+
+  scale_x_continuous(limits=c(1850, 2020),
+                              expand=c(0,0))+
+  labs(title= "Karbonintensiteten til de fem største økonomiene", y="Kg CO2 utslipp per dollar av BNP", color="Land", x="")+
+  theme(legend.position = "bottom")
 ```
 
 *\[*Figuren viser de dem største verdensøkonomiene og hvor mye kg CO2 produseres for per dollar med BNP. Populasjonsøkning og BNP økning over tid mikset med alternative energikilder gjør at alle land har en synkende trend av kg CO2-utslipp per dollar av GDP. I kina øker karbonintensiteten og produksjon kraftig etter at landet går gjennom et stort regjeringsskifte. I tyskland strupes produksjon og C02 emisjon per dollar av BNP når landet går inn i andre verdenskrig.*\]*
