@@ -222,7 +222,7 @@ Lag en pen figur med prosentvis vekst i nominelt og reelt BNP per person fra 197
 df_long %>%
   ggplot(aes(x = tid, y = bnp, color = var)) +
   geom_line(linewidth = 1) +
-  geom_smooth()+
+  geom_smooth(se = FALSE)+
   scale_x_continuous(limits = c(1970, 2021), expand = c(0, 0))+
   scale_y_continuous(labels = scales::percent_format(scale = 1))+
   theme_minimal()+
@@ -236,5 +236,3 @@ df_long %>%
   scale_color_discrete(labels = c('Løpende BNP', 'Fast BNP'))+
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50")
 ```
-
-Merknad fra meg selv: Geom_smooth ser ikke bra ut på figuren men inkluderer det fordi Even ville ha det med.
