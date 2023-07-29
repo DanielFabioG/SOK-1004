@@ -25,7 +25,6 @@ Innovasjon er en kilde til Ã¸konomisk vekst. I denne oppgaven skal vi se undersÃ
 # Last inn pakker
 
 ```{r}
-# output | false
 rm(list=ls()) 
 library(tidyverse)
 library(rjstat)
