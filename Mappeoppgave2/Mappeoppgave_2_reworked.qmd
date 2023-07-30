@@ -12,6 +12,8 @@ toc: true
 warning: false
 ---
 
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
+
 ```{r}
 rm(list = ls())
 library(tidyverse)
@@ -713,6 +715,8 @@ $$
 ***"Siktemålet med konsumprisindeksen (KPI) er å lage en levekostnadsindeks som skal gi svar på hvilken inntektskompensasjon som er nødvendig for at en gjennomsnittlig husholdning skal kunne opprettholde sin levestandard når prisen på varer og tjenester endres" ([Johannessen](https://www.ssb.no/priser-og-prisindekser/artikler-og-publikasjoner/_attachment/203142?_ts=1495b28c170), 2014; 13). Basert på dine svar til (ii) og (iii) hvor bra fungerer KPI som levekostnadsindeks?***
 
 *Det kan argumenteres for at KPI fungerer som en levekostnadsindeks. Når vi sammenlikner svarene vi får når vi regner prosentvis økning og utregning av Laspeyres-indeks, ser vi en klar sammenheng. Det viser at det er fullt mulig å bruke KPI som levekostnads indeks i tilfeller der vi ser på mat og forbruker konsum.*
+
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
 
 ### KILDER:
 
