@@ -43,7 +43,7 @@ Alle oppgaver gitt gjennom dette kurset finnes i "Cases" seksjonen, mens alt som
     <div style="width: 45%; position: relative;">
         <div class="content-overlay">
           <div class="text-overlay">Prosjekt</div>
-            <a href="/SOK-1004/Prosjektoppgave/index.html" class="larger">Første mappeoppgave</a>
+            <a href="/SOK-1004/Mappeoppgave1/Mappeoppgave_1_reworked.html" class="larger">Første mappeoppgave</a>
             <br>
             <a href="/SOK-1004/Prosjektoppgave/3_11_Task1_SOK1005_Project_V23.html" class="larger">Andre mappeoppgave</a>
             <br>
