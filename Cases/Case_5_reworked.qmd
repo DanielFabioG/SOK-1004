@@ -12,11 +12,8 @@ toc: true
 warning: false
 ---
 
-<<<<<<< HEAD
 For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
 
-=======
->>>>>>> 214a1a2f905785b531c4dc24120c8d367be5ca2a
 # Instruksjoner
 
 Denne oppgaven skal løses interaktivt i RStudio ved å legge inn egen kode og kommentarer. Det ferdige dokumentet lagres med kandidatnummeret som navn `[kandidatnummer]_SOK1004_C5_H22.qmd` og lastes opp på deres GitHub-side. Hvis du har kandidatnummer 43, så vil filen hete `43_SOK1004_C5_H22.qmd`. Påse at koden kjører og at dere kan eksportere besvarelsen til pdf. Lever så lenken til GitHub-repositoriumet i Canvas.
@@ -335,8 +332,5 @@ ggplot(aes(x=år, y=final)) +
 ## Står konklusjonen i rapporten seg?
 
 *Tolker man figuren så har arbeidsproduktiviteten fortsatt videre med en gjennomsnitlig økning på 1 prosent fra 2006 til 2021. Utregningen her avviker noe og viser at 2005-2013 har en gjennomsnitlig økning på 1.34 prosent mot 0.8 prosent i deres figur. Dette vil si at produktivitetsveksten er i en synkende trend og at det rapporten konkluderer med i 2015 stemmer hvor den sier at de gunstige tiårene vi har hatt fra 1996-2005 ikke trenger å bety at Norge fremover skal forvente like høy vekst i produktivitet.*
-<<<<<<< HEAD
 
 For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
-=======
->>>>>>> 214a1a2f905785b531c4dc24120c8d367be5ca2a
