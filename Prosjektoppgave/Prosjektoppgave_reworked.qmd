@@ -12,6 +12,8 @@ toc: true
 warning: false
 ---
 
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
+
 ```{r}
 rm(list=ls())
 options(scipen = 999)
@@ -575,6 +577,8 @@ theme(axis.title = element_text(), plot.title = element_text(size=17))
 ```
 
 *Det vi kan konkludere med er at i disse tiårene har det skjedd mye kritikkverdig i norsk økonomi. Som mange økonomer har kommet fram til tidligere er denne tiden et godt eksempel på hvordan pengepolitikken i et land ikke bør styres. Deflasjonen som paripolitikken førte til gjorde slik at Norge slet med blant annet tapte arbeidsdager, konflikter og streiker. Selv om mellomkrigstiden var en krisetid for Norge medførte den også til noen positive endringer for landet. Vi gikk fra et arbeidsgivermarked til et arbeidstakermarked, vi fikk flere fagforbund som forhandlet frem bedre arbeidsvilkår for arbeiderne og vi lærte at deflasjonspolitikk ikke skaper positive virkninger for en økonomi.*
+
+For å gå tilbake til hovedsiden trykker du [her](https://danielfabiog.github.io/SOK-1004/).
 
 ## Kildehenvisning:
 
