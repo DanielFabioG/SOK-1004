@@ -52,7 +52,6 @@ Alle oppgaver gitt gjennom dette kurset finnes i "Cases" seksjonen, mens alt som
     </div>
 </div>
 ```
-
 ## Referanser
 
 Materialene til disse oppgavene og prosjektet er utformet med referanse til de uvurderlige ressursene og bidragene gitt i studieplanen for SOK-1004. Dette inkluderer de flotte forelesningene holdt av Derek J Clark og Even Solstvedt Hvinden. Til tross for den ytterste omsorg som er tatt under forberedelsen av disse materialene, er eventuelle uoverensstemmelser eller feil som utilsiktet kan ha oppstått, helt og holdent mitt ansvar utenom noe av koden skrevet i Case 3 som er tatt fra løsningsforslaget.
