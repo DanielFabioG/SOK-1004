@@ -315,7 +315,7 @@ ggplot(aes(x=år, y=final)) +
                linewidth=0.8) +
   geom_segment(aes(x=11,xend=18,y=avg05_13[1,12],yend=avg05_13[1,12]), 
                linewidth=0.8) + 
-  geom_segment(aes(x=1,xend=26,y=avg06_21[1,12],yend=avg06_21[1,12]), 
+  geom_segment(aes(x=18,xend=26,y=avg06_21[1,12],yend=avg06_21[1,12]), 
                linewidth=0.8) +
   
 # Lager linje for 0 punktet horisontalt og en for punkt 5 for å få den som en boks

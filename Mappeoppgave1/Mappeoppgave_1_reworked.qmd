@@ -73,7 +73,7 @@ library(gglorenz)
 ```
 
 ```{r}
-url <- "https://raw.githubusercontent.com/uit-sok-1004-h22/uit-sok-1004-h22.github.io/main/data/skatt_troms_2015.RDS"
+url <- "https://raw.githubusercontent.com/uit-sok-1004-h23/uit-sok-1004-h23.github.io/main/data/skatt_troms_2015.RDS"
 
 skatt_troms_2015 <- url %>%
   url() %>%
@@ -108,7 +108,7 @@ ggplot(harstad, aes(inntekt))+
 # Oppgave 3. Inntektsulikhet i Norge 2008-2019
 
 ```{r}
-url <- "https://raw.githubusercontent.com/uit-sok-1004-h22/uit-sok-1004-h22.github.io/main/data/oecd_data_nor.csv"
+url <- "https://raw.githubusercontent.com/uit-sok-1004-h23/uit-sok-1004-h23.github.io/main/data/oecd_data_nor.csv"
 
 oecd_n <- url %>% 
   read_csv()
@@ -262,6 +262,34 @@ df %>%
   labs (title = "Inntektsfordeling i Tromsø 2015 (etter skatt)",
         y = "Inntekt (1000kr)", x= "Persentil")+
   theme_minimal()
+```
+
+```{r}
+
+# Calculate quartiles for income before tax
+df_before_tax <- tromso %>%
+  select(bruttonetto) %>%
+  quantile(probs = seq(0.25, 1, by = 0.25), na.rm = TRUE) %>%
+  as_tibble() %>%
+  add_column(Quartile = c(25, 50, 75, 100)) %>%
+  rename(inntekt_fr_skatt = value)
+
+# Plot income before tax
+df_before_tax %>%
+  ggplot(aes(x = Quartile, y = inntekt_fr_skatt / 1000)) +
+  geom_col() +
+  labs(title = "Inntektsfordeling i Tromsø 2015 (før skatt)",
+       y = "Inntekt (1000kr)", x = "Quartile") +
+  theme_minimal()
+
+# Plot income after tax
+df_after_tax %>%
+  ggplot(aes(x = Quartile, y = inntekt_etter_skatt / 1000)) +
+  geom_col() +
+  labs(title = "Inntektsfordeling i Tromsø 2015 (etter skatt)",
+       y = "Inntekt (1000kr)", x = "Quartile") +
+  theme_minimal()
+
 ```
 
 ```{r}
